@@ -21,29 +21,18 @@ class SubmitComponent extends Component {
     reader.onload = (e) => {
 
       const url = "http://localhost:3001/count"
-      const formData = {
-        image: e.target.result
-      }
-      // console.log("SENDING REQUEST")
-      // return axios.get(url, formData)
-      //   .then((response) => {
-      //     console.log("RECEIVING REQUEST")
-      //     console.warn("response", response)
-      //   })
-      //   .catch((error) => {
-      //     console.log("ERROR", error)
-      //   })
 
-
+      var image = e.target.result;
+      console.warn("image", image)
       var data = qs.stringify({
-        'image': e.target.result,
+        'image': image,
       });
       var config = {
         method: 'get',
         url: url,
         headers: { 
           'Content-Type': 'application/x-www-form-urlencoded',
-          'Origin': "http://localhost:3001/count"
+          'crossDomain': true
         },
         data: data
       };
