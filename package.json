@@ -1,12 +1,13 @@
 {
   "scripts": {
-    "start": "concurrently \"cd src/frontend/ && npm install && set PORT=3001 && react-scripts start \" \"cd src/backend && npm install && gulp --gulpfile gulpfile.js\""
+    "start": "concurrently \"cd src/frontend/ && npm install && set PORT=80 && react-scripts start \" \"cd src/backend && npm install && gulp --gulpfile gulpfile.js\""
   },
   "dependencies": {
     "@testing-library/react": "^12.1.2",
     "concurrently": "^7.1.0",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
+    "react": "^17.0.2",
     "react-scripts": "5.0.0"
   }
 }
