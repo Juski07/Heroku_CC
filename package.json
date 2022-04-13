@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "concurrently \"cd src/frontend/ && npm install && set PORT=80 && react-scripts start \" \"cd src/backend && npm install && gulp --gulpfile gulpfile.js\""
+    "start": "cd src/frontend/ && npm install && set PORT=80 && react-scripts start"
   },
   "dependencies": {
     "@testing-library/react": "^12.1.2",
