@@ -38,11 +38,11 @@ class Count extends Component{
 
   async componentDidMount(){
     updateState = updateState.bind(this)
-    // var json = 'http://127.0.0.1:8080/model.json'
-    // console.log(json)
-    // const model = await tf.loadGraphModel(json)
-    // console.log(model)
-    // this.setState( {model: model} )
+    var json = 'http://127.0.0.1:8080/model.json'
+    console.log(json)
+    const model = await tf.loadGraphModel(json)
+    console.log(model)
+    this.setState( {model: model} )
     // localStorage.setItem('json', JSON.parse(JSON.stringify(json)))
     // await require('./model/model.json').save('localstorage://json');
   }
@@ -176,7 +176,7 @@ class Count extends Component{
       :
       <div>
         <h1>Live counting: select an image or take a picture ! </h1>
-        <input type="file" name="file" onChange={(e) => this.onChange(e)}/>
+        <input type="file" name="file" onChange={(e) => this.useModel(e)}/>
         <CameraFeed uploadImage={() => this.uploadImage}/>
       </div>
     )
