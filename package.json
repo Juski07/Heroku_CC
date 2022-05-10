@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "cd src/frontend/ && set PORT=80 && react-scripts start"
+    "start": "cd src/frontend/ && npm install && react-scripts start"
   },
   "dependencies": {
     "@testing-library/react": "^12.1.2",
